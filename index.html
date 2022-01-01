@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>ZS❤️CM</title>
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            font-family: Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+            background-image: url('qx.jpg');
+            font-size: 85%;
+            margin: 0;
+        }
+        
+        h2 {
+            font-size: 220%;
+            font-weight: 400;
+        }
+        
+        .content {
+            position: absolute;
+            width: 100%;
+            top: 40%;
+            transform: translate(0, -50%);
+            text-align: center;
+        }
+        
+        .timer {
+            font-size: 180%;
+            line-height: 1.5;
+            margin: 1em 0;
+        }
+        
+        .timer b {
+            color: rgb(253, 99, 125);
+        }
+    </style>
+	
+	<!--  <link href="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js" rel="preload" as="script"/> -->
+</head>
+
+<body>
+    <div class="content">
+        <h2>我们已经一起度过了❤️</h2>
+        <!--  <h2>我们已经一起度过了❤️📅🚀</h2>      -->
+        <div class="timer">
+            <b id="d"></b> Days <b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds 🚀
+        </div>
+    </div>
+
+	<!--计时器js-->
+      <script>
+        function timer() {
+        window.setTimeout("timer()", 1000);
+        var start = new Date("2020/10/05 00:00:00");
+        var t = new Date().getTime() - start;
+        var h = ~~(t / 1000 / 60 / 60 % 24);
+        if (h < 10) {h = "0" + h;}
+        var m = ~~(t / 1000 / 60 % 60);
+        if (m < 10) { m = "0" + m;}
+        var s = ~~(t / 1000 % 60);
+       if (s < 10) {s = "0" + s;}
+        document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
+       document.getElementById('h').innerHTML = h;
+       document.getElementById('m').innerHTML = m;
+       document.getElementById('s').innerHTML = s;}
+        timer();
+      </script> 
+	<!--END：计时器js-->
+
+	
+	      <div class="song">
+          <!--页面底部歌词-->
+          <!-- require APlayer -->
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+          <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+          <!-- require MetingJS -->
+          <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+          <meting-js 
+          server="netease" 
+          type="playlist" 
+          id="394250065" 
+          fixed="true"
+
+          autoplay="false" 
+          order="random" 
+          loop="all"></meting-js>
+      </div>
+	
+		<!--鼠标点击显示爱心-->
+	<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
+<!--	<script src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>a -->
+	<script type="text/javascript" color="177,122,125" opacity='1' zIndex="-1" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+
+
+
+</body>
+
+</html>
